@@ -37,7 +37,7 @@ export default function Home() {
             
             <div className="flex-1 space-y-6">
               <div className="space-y-2">
-                <h2 className="text-sm md:text-base uppercase tracking-wider">WELCOME TO MY WORLD</h2>
+                {/* <h2 className="text-sm md:text-base uppercase tracking-wider">WELCOME TO MY WORLD</h2> */}
                 <h1 className="text-4xl md:text-6xl font-bold">
                   Hi, I'm João <span className="text-green-400">Victor</span>
                 </h1>
@@ -103,7 +103,7 @@ export default function Home() {
 
       {/* About Section */}
       <section id="about" className="py-24 bg-black/50">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-5">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">About me</h2>
           <p className="text-gray-300 mb-12">A resume about my abilities and progress in my career.</p>
 
@@ -125,7 +125,7 @@ export default function Home() {
               </p>
 
               <div>
-                <h3 className="text-xl font-semibold mb-4">Skills</h3>
+                <h3 className="text-sm tracking-wider mb-4">Skills</h3>
                 {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-4"> */}
                 <div className="flex items-center gap-4">
                   <svg viewBox="0 0 128 128" className="skill-icons">
@@ -173,33 +173,35 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-4">
-              <div className="col-span-1">
+            
+            
+            <div className="grid grid-cols-2 sm:grid-cols-1 lg:grid-cols-2 gap-4 p-4">
+              <div className="hidden lg:block col-span-1">
                 <div className="w-full aspect-square overflow-hidden rounded-lg">
                   <img src="/arts/art1.png" alt="Image 1" className="w-full h-full object-cover" />
                 </div>
               </div>
-              <div className="col-span-1">
+              <div className="hidden lg:block col-span-1">
                 <div className="w-full aspect-square overflow-hidden rounded-lg">
                   <img src="/arts/art2.png" alt="Image 2" className="w-full h-full object-cover" />
                 </div>
               </div>
-              <div className="col-span-2 row-span-2 hidden md:block">
-                <div className="w-full h-full max-h-[340px] overflow-hidden rounded-lg">
-                  <img src="/arts/art3.png" alt="Image 3" className="w-full h-full object-cover" />
-                </div>
-              </div>
-              <div className="col-span-1">
-                <div className="w-full aspect-square overflow-hidden rounded-lg">
-                  <img src="/arts/art4.png" alt="Image 4" className="w-full h-full object-cover" />
-                </div>
-              </div>
-              <div className="col-span-1">
+              <div className="hidden lg:block col-span-1">
                 <div className="w-full aspect-square overflow-hidden rounded-lg">
                   <img src="/arts/art5.png" alt="Image 5" className="w-full h-full object-cover" />
                 </div>
               </div>
+              <div className="col-span-1 hidden md:block">
+                <div className="w-full aspect-square overflow-hidden rounded-lg">
+                  <img src="/arts/art3.png" alt="Image 3" className="w-full h-full object-cover" />
+                </div>
+              </div>
             </div>
+
+
+
+
+
 
 
           </div>

@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "João Victor - Statistician",
+  title: "João Victor | Statistician | DS",
   description: "Portfolio created to show some of my work",
 };
 
