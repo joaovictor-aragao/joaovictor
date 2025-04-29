@@ -56,21 +56,21 @@ export default function Home() {
                 <h3 className="text-sm tracking-wider mb-4">Contact me</h3>
                 <div className="flex gap-3">
                   <Link
-                    href="https://github.com"
+                    href="https://github.com/joaovictor-aragao"
                     target="_blank"
                     className="p-3 rounded-md hover:text-green-400 transition-colors"
                   >
                     <Github className="h-5 w-5" />
                   </Link>
                   <Link
-                    href="https://linkedin.com"
+                    href="https://www.linkedin.com/in/joao-victor-estatistico/"
                     target="_blank"
                     className="p-3 rounded-md hover:text-green-400 transition-colors"
                   >
                     <Linkedin className="h-5 w-5" />
                   </Link>
                   <Link
-                    href="mailto:contact@example.com"
+                    href="mailto:joao.victoraragao@hotmail.com"
                     className="p-3 rounded-md hover:text-green-400 transition-colors"
                   >
                     <Mail className="h-5 w-5" />
@@ -92,7 +92,7 @@ export default function Home() {
                   src="/profile.jpg"
                   alt="João Victor"
                   fill
-                  className="object-cover object-center rounded-lg rounded"
+                  className="object-cover object-center rounded"
                   priority
                 />
               </div>
@@ -172,9 +172,6 @@ export default function Home() {
                 </div>  
               </div>
             </div>
-
-            
-            
             <div className="grid grid-cols-2 sm:grid-cols-1 lg:grid-cols-2 gap-4 p-4">
               <div className="hidden lg:block col-span-1">
                 <div className="w-full aspect-square overflow-hidden rounded-lg">
@@ -198,12 +195,6 @@ export default function Home() {
               </div>
             </div>
 
-
-
-
-
-
-
           </div>
         </div>
       </section>
@@ -226,12 +217,27 @@ export default function Home() {
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
                   <p className="text-gray-300 mb-4">{project.description}</p>
-                  <Link
-                    href={project.link}
-                    className="inline-flex items-center gap-2 text-green-400 hover:text-green-200"
-                  >
-                    View Code <ExternalLink className="h-4 w-4" />
-                  </Link>
+
+                  <div className="flex gap-4  items-center">
+                    <Link
+                      href={project.link}
+                      className="inline-flex items-center gap-2 text-green-400 hover:text-green-200"
+                    >
+                      View Code <ExternalLink className="h-4 w-4" />
+                    </Link>
+
+                    {/* Se existir tryout */}
+                    {project.tryout?.is && (
+                      <Link
+                        href={project.tryout.link}
+                        className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-200"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Try App <ExternalLink className="h-4 w-4" />
+                      </Link>
+                    )}
+                  </div>  
                 </div>
               </div>
             ))}
@@ -256,6 +262,10 @@ const projects = [
     description: "An Web App built to allows users to calculate samples and errors.",
     image: "/projects/margin-calculator.png?height=300&width=400",
     link: "https://github.com/joaovictor-aragao/calculadora-amostral",
+    tryout: {
+      is: true,
+      link: "https://calculadora-amostral.onrender.com"
+    }
   },
   {
     id: 2,
@@ -263,6 +273,10 @@ const projects = [
     description: "Analyze the Differentiated Thyroid Cancer Recurrence dataset using EDA and build PREDICT interface models to classify whether cancer.",
     image: "/projects/thyroid-card.png?height=300&width=400",
     link: "https://github.com/joaovictor-aragao/thyroid-cancer-recurrence",
+    tryout: {
+      is: true,
+      link: "https://thyroid-cancer-recurrence.onrender.com/"
+    }
   },
   {
     id: 3,
@@ -270,6 +284,10 @@ const projects = [
     description: "Retrieve all the tasks associated with the current sprint from the Jira Atlassian API, ensuring to include relevant details such as task status, assignee, priority, and estimated completion time.",
     image: "/projects/dashboard-jira.png?height=300&width=400",
     link: "https://github.com/joaovictor-aragao/jira-team-dashboard",
+    tryout: {
+      is: false,
+      link: ""
+    }
   },
   {
     id: 4,
@@ -277,6 +295,10 @@ const projects = [
     description: "Predicting Stock Market Close Prices with Streamlit and Binary ML Models.",
     image: "/projects/kpis-binary.png?height=300&width=400",
     link: "https://github.com/joaovictor-aragao/stock-market-predict",
+    tryout: {
+      is: false,
+      link: ""
+    }
   },
   {
     id: 5,
@@ -284,6 +306,10 @@ const projects = [
     description: "Visualization Fogo Cruzado API by using shiny in R for each state.",
     image: "/projects/fogo-cruzado.png?height=300&width=400",
     link: "https://github.com/joaovictor-aragao/fogocruzado-dash",
+    tryout: {
+      is: false,
+      link: ""
+    }
   },
   {
     id: 6,
@@ -291,5 +317,9 @@ const projects = [
     description: "A repository of the projects I worked on or currently working on.",
     image: "/projects/portfolio.png?height=300&width=400",
     link: "https://github.com/joaovictor-aragao/joaovictor",
+    tryout: {
+      is: true,
+      link: "https://joaovictoraragao.vercel.app/"
+    }
   },
 ]
