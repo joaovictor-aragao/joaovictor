@@ -319,4 +319,15 @@ const projects = [
       link: "https://joaovictoraragao.vercel.app/"
     }
   },
+  {
+    id: 7,
+    title: "CSV converter by using Apache Nifi",
+    description: "Medium article with my notations to Apache NiFi flow's project that reads a CSV file to JSON with python.",
+    image: "/projects/data_flow.png?height=300&width=400",
+    link: "https://medium.com/@j.victor0205/convert-csv-to-json-using-apache-nifi-and-python-7d75cd2788ec",
+    tryout: {
+      is: false,
+      link: ""
+    }
+  },
 ]
